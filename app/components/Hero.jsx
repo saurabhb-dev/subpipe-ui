@@ -5,7 +5,7 @@ import AuthButton from './AuthButton'
 export default function Hero({ apiKey, scansRemaining }) {
   const [copied, setCopied] = useState(false)
 
-  const command = `cat subdomains.txt | ./subpipe --SUBPIPE_API_KEY=${apiKey}`
+  const command = `cat subdomains.txt | subpipe --SUBPIPE_API_KEY=${apiKey}`
 
   const handleCopy = () => {
     navigator.clipboard.writeText(command)
@@ -95,7 +95,7 @@ export default function Hero({ apiKey, scansRemaining }) {
             <span className="text-slate-500 text-xs ml-2 font-sans font-medium">saurabh@prashrut: ~/subpipe-cli</span>
           </div>
           <div className="p-5 text-[10px] sm:text-xs text-slate-300 space-y-1 overflow-x-auto whitespace-pre">
-            <p className="text-white">$ cat subdomains.txt | ./subpipe</p>
+            <p className="text-white">$ cat subdomains.txt | subpipe</p>
             <p className="text-blue-400 mt-2 mb-2">🚀 SubPipe Analysis Started: 26 targets sent to https://api.subpipe.run/v1/scan</p>
             <p className="text-slate-600">----------------------------------------------------------------------</p>
             <p><span className="text-cyan-400">[13:38:52] LOW</span>      Internal/RFC1918 IP Exposure (SSRF Enabler): internal-test.subpipe.run [10.0.0.5]</p>
