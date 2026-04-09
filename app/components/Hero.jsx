@@ -5,7 +5,8 @@ import AuthButton from './AuthButton'
 export default function Hero({ apiKey, scansRemaining }) {
   const [copied, setCopied] = useState(false)
 
-  const command = `cat subdomains.txt | subpipe --SUBPIPE_API_KEY=${apiKey}`
+  // const command = `cat subdomains.txt | subpipe --SUBPIPE_API_KEY=${apiKey}`
+  const command = `export SUBPIPE_API_KEY="${apiKey}"\ncat subdomains.txt | subpipe`
 
   const handleCopy = () => {
     navigator.clipboard.writeText(command)
@@ -51,8 +52,10 @@ export default function Hero({ apiKey, scansRemaining }) {
           ) : (
             <div className="w-full max-w-lg text-left animate-in fade-in slide-in-from-bottom-4 duration-500">
               <div className={`p-3 pl-4 rounded-xl border flex items-center justify-between gap-4 shadow-2xl transition-colors ${isExhausted ? 'bg-rose-950/20 border-rose-900/50' : 'bg-[#0D1117] border-slate-800'}`}>
-                <code className={`font-mono text-sm whitespace-pre-wrap break-all ${isExhausted ? 'text-rose-400/50 line-through' : 'text-emerald-400'}`}>
-                  {command}
+                <code className={`font-mono text-sm whitespace-pre-wrap break-all leading-relaxed ${isExhausted ? 'text-rose-400/50 line-through' : 'text-emerald-400'}`}>
+                  <span className={isExhausted ? '' : 'text-pink-400'}>export</span> SUBPIPE_API_KEY="{apiKey}"
+                  <br />
+                  <span className={isExhausted ? '' : 'text-emerald-400'}>cat</span> subdomains.txt | subpipe
                 </code>
                 <button
                   onClick={handleCopy}
