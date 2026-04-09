@@ -25,7 +25,7 @@ export default function Hero({ apiKey, scansRemaining }) {
           Detect DNS Vulns with <span className="text-blue-600">Zero Noise.</span>
         </h1>
         <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto xl:mx-0 leading-relaxed">
-          A high-fidelity engine built to eliminate theoretical false positives. Get verified takeovers, dangling cloud IPs, and SSRF enablers—not just 'potential' leads.
+          Pipe your existing subdomain lists into a high-fidelity engine built to eliminate theoretical false positives. Get verified takeovers, dangling cloud IPs, and SSRF enablers—not just 'potential' leads.
         </p>
 
         <div className="flex flex-col items-center xl:items-start gap-4 w-full">

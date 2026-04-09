@@ -6,6 +6,10 @@ export default function FAQ() {
 
   const faqs = [
     {
+      question: "Does SubPipe discover subdomains for me?",
+      answer: "No. SubPipe is a vulnerability analysis engine, not a discovery tool. You bring the subdomains (using tools like subfinder, amass, or your own datasets), pipe them into the CLI, and SubPipe will tell you exactly which ones are vulnerable."
+    },
+    {
       question: "Is my recon data safe?",
       answer: "Absolutely. We do not store, log, or harvest your subdomains. The engine processes the domains in memory to determine vulnerability status and drops them immediately. We are built by bug bounty hunters, for bug bounty hunters."
     },

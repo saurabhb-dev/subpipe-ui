@@ -67,9 +67,9 @@ export default function Features() {
         
         {/* Left Side: Context & Install */}
         <div className="p-8 lg:w-1/3 bg-slate-50 border-b lg:border-b-0 lg:border-r border-slate-200 flex flex-col justify-center">
-          <h3 className="text-2xl font-bold text-slate-900 mb-2 tracking-tight">Built in Go.</h3>
+          <h3 className="text-2xl font-bold text-slate-900 mb-2 tracking-tight">Plugs directly into your recon pipeline.</h3>
           <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-            SubPipe is a lightning-fast, single-binary CLI tool. Install it directly via Go or grab the latest release from our <a href="https://github.com/subpipe/subpipe" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold hover:underline">GitHub repository</a>.
+            SubPipe doesn't find subdomains; it analyzes them. It's a lightning-fast, single-binary CLI tool that takes stdin from your favorite recon tools. Install it directly via Go or grab the latest release. <a href="https://github.com/subpipe/subpipe" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold hover:underline">GitHub repository</a>.
           </p>
           
           <div className="mb-2 text-xs font-bold text-slate-500 uppercase tracking-wider">Step 1: Install</div>
