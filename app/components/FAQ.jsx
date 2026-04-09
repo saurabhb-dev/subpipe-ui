@@ -10,7 +10,7 @@ export default function FAQ() {
       answer: "Absolutely. We do not store, log, or harvest your subdomains. The engine processes the domains in memory to determine vulnerability status and drops them immediately. We are built by bug bounty hunters, for bug bounty hunters."
     },
     {
-      question: "How do I bypass the 5,000 scans/month limit?",
+      question: "Need more than 5,000 scans/month?",
       answer: "The free tier gives you 5,000 scans to get a feel for the engine's accuracy. If you are running high-volume enterprise recon or need unlimited API access, please reach out directly at saurabh.banawar@gmail.com to request an extended quota."
     },
     {

@@ -14,7 +14,7 @@ export default function Features() {
     "AAAA Record Takeovers (Dangling Cloud IPs validated against AWS/GCP ranges). (ipv6)"
   ]
 
-  const bashScript = `targets=("demo-aws.subpipe.run" "demo-ipv6.subpipe.run" "demo-gcp.subpipe.run" "demo-ns.subpipe.run" "demo-mx.subpipe.run" "demo-pantheon.subpipe.run" "demo-s3-x912.subpipe.run" "demo-surge.subpipe.run" "demo-azure.subpipe.run" "demo-eb.subpipe.run" "clickjacker.io" "test.clickjacker.io" "analytics.google.com" "elements.heroku.com" "tasks.google.com" "cloud.google.com" "docs.cloud.google.com" "about.gitlab.com" "docs.gitlab.com" "docs.unraveldata.com" "keep.google.com" "chat.google.com" "dead-domain.subpipe.run" "alt-dead-domain.subpipe.run" "internal-test.subpipe.run" "cname-ssrf.subpipe.run")\n\nprintf "%s\\n" "\${targets[@]}" > subdomains.txt\ncat subdomains.txt | subpipe`;
+  const bashScript = `targets=("demo-aws.subpipe.run" "demo-ipv6.subpipe.run" "demo-gcp.subpipe.run" "demo-ns.subpipe.run" "demo-mx.subpipe.run" "demo-s3-x912.subpipe.run" "demo-surge.subpipe.run" "demo-azure.subpipe.run" "demo-eb.subpipe.run" "analytics.google.com" "elements.heroku.com" "tasks.google.com" "cloud.google.com" "dead-domain.subpipe.run" "alt-dead-domain.subpipe.run" "internal-test.subpipe.run" "cname-ssrf.subpipe.run")\n\nprintf "%s\\n" "\${targets[@]}" > subdomains.txt\ncat subdomains.txt | subpipe`;
 
   return (
     <section className="pt-6 pb-24 max-w-7xl mx-auto px-8 w-full">
@@ -79,6 +79,10 @@ export default function Features() {
 
           <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Step 2: Test Instantly</div>
           <p className="text-xs text-slate-500 mt-1">Run the script on the right to verify engine outputs against real vulnerabilities that we hosted for you on *.subpipe.run</p>
+          <div className="bg-[#0D1117] p-3 rounded-lg font-mono text-xs text-slate-300 shadow-inner mb-6 flex justify-between items-center group">
+            <span className="overflow-x-auto"><span className="text-emerald-400">$</span> subfinder -d target.com -silent | subpipe</span>
+          </div>
+          
         </div>
         
         {/* Right Side: The Bash Script */}

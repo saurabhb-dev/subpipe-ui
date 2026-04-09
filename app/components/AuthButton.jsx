@@ -10,15 +10,16 @@ export default function AuthButton({ className, text = "Sign in with Google" }) 
   const handleLogin = async () => {
     await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { 
-        redirectTo: `${window.location.origin}/auth/callback` 
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback`
       }
     })
   }
 
-  // Use the passed className, or default to the blue style from your screenshot
-  const defaultStyle = "bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-sm"
-  
+  // Matching the enhanced shadow and font-weight for the hero
+  const defaultStyle = "bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-xl shadow-blue-600/20 text-lg"
+
+
   return (
     <button onClick={handleLogin} className={className || defaultStyle}>
       {text}

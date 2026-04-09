@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "SubPipe | High-Octane Recon Sniper",
+  title: "SubPipe | A precision-engineered sniper for your recon pipeline.",
   description: "Find subdomain takeovers and SSRF enablers in seconds. Built for bug bounty hunters.",
 };
 
